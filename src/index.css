@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans;
+  }
+}
+
+.glass-panel {
+  @apply bg-slate-900/50 backdrop-blur-lg border border-slate-800/50 rounded-2xl;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600;
+}
+
+.gradient-border {
+  @apply relative before:absolute before:-inset-[1px] before:rounded-[inherit] before:bg-gradient-to-r before:from-blue-500 before:to-purple-600 before:-z-10;
+}
+
+.hover-gradient {
+  @apply relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-500/20 before:to-purple-600/20 before:opacity-0 before:transition-opacity hover:before:opacity-100;
+}
